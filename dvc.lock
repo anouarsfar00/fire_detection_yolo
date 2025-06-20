@@ -1,0 +1,35 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/training.py
+    deps:
+    - path: data/Fire_dataset
+      hash: md5
+      md5: 8b53cea2d199e850e1718d74871ddb9c.dir
+      size: 2637654870
+      nfiles: 105879
+    - path: params.yaml
+      hash: md5
+      md5: ec07a8665edbee898bb0f595ea0732dc
+      size: 244
+    - path: src/training.py
+      hash: md5
+      md5: f349174ffeab8211870d597d2a37a22d
+      size: 3061
+    - path: src/utils.py
+      hash: md5
+      md5: 32b9309ef5906ddab785bf883015016d
+      size: 20
+    outs:
+    - path: models/yolov8s/weights/best.pt
+      hash: md5
+      md5: 15a2b0fc0886544499f1bebdc63e6ef8
+      size: 22513507
+    - path: reports/train_metrics.csv
+      hash: md5
+      md5: 6f900d6083e3f18a48b60cf42e71b55b
+      size: 64
+    - path: reports/train_params.yaml
+      hash: md5
+      md5: 557cb66cfe026202c5893f10405d83f9
+      size: 126

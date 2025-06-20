@@ -1,0 +1,15 @@
+stages:
+  train:
+    cmd: python src/training.py
+    deps:
+      - data/Fire_dataset
+      - src/training.py
+      - src/utils.py
+      - params.yaml
+    outs:
+      - models/yolov8s/weights/best.pt
+      - reports/train_params.yaml:
+          cache: false
+    metrics:
+      - reports/train_metrics.csv:
+          cache: false

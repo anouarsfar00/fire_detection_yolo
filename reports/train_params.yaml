@@ -1,0 +1,9 @@
+batch: 8
+epochs: 2
+imgsz: 640
+lr0: 0.01
+model_type: yolov8s.pt
+name: yolov8s
+optimizer: SGD
+pretrained: true
+seed: 0

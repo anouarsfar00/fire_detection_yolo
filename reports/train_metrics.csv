@@ -1,0 +1,4 @@
+metric,value
+epochs_completed,2
+batch_size,8
+image_size,640
